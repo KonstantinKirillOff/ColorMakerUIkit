@@ -31,27 +31,34 @@ class ViewController: UIViewController {
         greenSlider.value = Float.random(in: 0...1)
         blueSlider.value = Float.random(in: 0...1)
         
-        valueRedLabel.text = String(format: "%.2f", redSlider.value)
-        valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
-        valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
-        
+        setValue(for: valueRedLabel, valueBlueLabel, valueGreenLabel)
         getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
     }
     
     @IBAction func changeColorSettings(_ sender: UISlider) {
         
-        switch sender.tag {
-        case 1:
-            valueRedLabel.text = String(format: "%.2f", redSlider.value)
-            getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
-        case 2:
-            valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
-            getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
-        case 3:
-            valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
-            getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
+        switch sender {
+        case redSlider:
+            setValue(for: valueRedLabel)
+        case greenSlider:
+            setValue(for: valueGreenLabel)
         default:
-            getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
+            setValue(for: valueBlueLabel)
+        }
+        
+        getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
+    }
+    
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case valueRedLabel:
+                valueRedLabel.text = String(format: "%.2f", redSlider.value)
+            case valueBlueLabel:
+                valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
+            default:
+                valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
+            }
         }
     }
     
