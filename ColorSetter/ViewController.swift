@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainView.layer.cornerRadius = 15
+        
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
@@ -51,12 +53,14 @@ class ViewController: UIViewController {
         default:
             getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
         }
-        
     }
     
-    
     private func getColoFrom(redColor red: Float, greenColor green: Float, blueColor blue: Float) {
-        mainView.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1)
+        mainView.backgroundColor = UIColor(
+            red: CGFloat(red),
+            green: CGFloat(green),
+            blue: CGFloat(blue),
+            alpha: 1)
     }
 
 }
