@@ -166,13 +166,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
-                            <constraint firstItem="eGI-pC-Be8" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="4E9-DD-fAe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azh-om-g1N" secondAttribute="trailing" constant="16" id="6Kr-xO-yex"/>
                             <constraint firstItem="jTp-oz-Chc" firstAttribute="top" secondItem="azh-om-g1N" secondAttribute="bottom" constant="23" id="9Jg-iw-pi2"/>
                             <constraint firstItem="jTp-oz-Chc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HAX-ix-pjw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eGI-pC-Be8" secondAttribute="bottom" constant="77" id="Hgl-0O-QUt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eGI-pC-Be8" secondAttribute="trailing" constant="166" id="ILg-Nr-jMQ"/>
                             <constraint firstItem="azh-om-g1N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="NnK-5w-2q5"/>
+                            <constraint firstItem="eGI-pC-Be8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vbv-ka-qa8"/>
                             <constraint firstItem="azh-om-g1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="W78-Xm-7Wo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jTp-oz-Chc" secondAttribute="trailing" constant="16" id="d7Y-UD-cJn"/>
                             <constraint firstItem="jTp-oz-Chc" firstAttribute="width" secondItem="azh-om-g1N" secondAttribute="width" id="dbu-w5-7bG"/>

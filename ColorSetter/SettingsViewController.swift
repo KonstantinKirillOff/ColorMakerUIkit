@@ -38,13 +38,17 @@ class SettingsViewController: UIViewController {
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
         
-        getSliderValues(from: screenColor)
+        getSliderValues()
         
         setLabelsValues(for: valueRedLabel, valueBlueLabel, valueGreenLabel)
         setTextFieldValues(for: redTextField, blueTextField, greenTextField)
         
-        getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
-        
+        setViewColor()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func changeColorSettings(_ sender: UISlider) {
@@ -61,7 +65,7 @@ class SettingsViewController: UIViewController {
             setTextFieldValues(for: blueTextField)
         }
         
-        getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
+        setViewColor()
     }
     
     
@@ -72,12 +76,12 @@ class SettingsViewController: UIViewController {
         
     }
     
-    private func getSliderValues(from color: UIColor?) {
-        guard let gettingColor = color else { return }
+    private func getSliderValues() {
+        let ciColor = CIColor(color: screenColor)
         
-        redSlider.setValue(Float(gettingColor.ciColor.red), animated: false)
-        greenSlider.setValue(Float(gettingColor.ciColor.green), animated: false)
-        blueSlider.setValue(Float(gettingColor.ciColor.blue), animated: false)
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
     }
     
     
@@ -107,11 +111,11 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    private func getColoFrom(redColor red: Float, greenColor green: Float, blueColor blue: Float) {
+    private func setViewColor() {
         mainView.backgroundColor = UIColor(
-            red: CGFloat(red),
-            green: CGFloat(green),
-            blue: CGFloat(blue),
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
             alpha: 1)
     }
 
@@ -134,7 +138,7 @@ extension SettingsViewController: UITextFieldDelegate {
             setLabelsValues(for: valueGreenLabel)
         }
         
-        getColoFrom(redColor: redSlider.value, greenColor: greenSlider.value, blueColor: blueSlider.value)
+        setViewColor()
     }
 }
 
