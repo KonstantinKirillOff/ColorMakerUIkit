@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4303FBB52892C452001255A1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303FBB42892C452001255A1 /* MainScreenViewController.swift */; };
 		FFCAD59128632F51002127A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD59028632F51002127A4 /* AppDelegate.swift */; };
 		FFCAD59328632F51002127A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD59228632F51002127A4 /* SceneDelegate.swift */; };
-		FFCAD59528632F51002127A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD59428632F51002127A4 /* ViewController.swift */; };
+		FFCAD59528632F51002127A4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD59428632F51002127A4 /* SettingsViewController.swift */; };
 		FFCAD59828632F51002127A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCAD59628632F51002127A4 /* Main.storyboard */; };
 		FFCAD59A28632F53002127A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFCAD59928632F53002127A4 /* Assets.xcassets */; };
 		FFCAD59D28632F53002127A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCAD59B28632F53002127A4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4303FBB42892C452001255A1 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		FFCAD58D28632F51002127A4 /* ColorSetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCAD59028632F51002127A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFCAD59228632F51002127A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFCAD59428632F51002127A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		FFCAD59428632F51002127A4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		FFCAD59728632F51002127A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFCAD59928632F53002127A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFCAD59C28632F53002127A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +60,8 @@
 			children = (
 				FFCAD59028632F51002127A4 /* AppDelegate.swift */,
 				FFCAD59228632F51002127A4 /* SceneDelegate.swift */,
-				FFCAD59428632F51002127A4 /* ViewController.swift */,
+				FFCAD59428632F51002127A4 /* SettingsViewController.swift */,
+				4303FBB42892C452001255A1 /* MainScreenViewController.swift */,
 				FFCAD59628632F51002127A4 /* Main.storyboard */,
 				FFCAD59928632F53002127A4 /* Assets.xcassets */,
 				FFCAD59B28632F53002127A4 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFCAD59528632F51002127A4 /* ViewController.swift in Sources */,
+				FFCAD59528632F51002127A4 /* SettingsViewController.swift in Sources */,
+				4303FBB52892C452001255A1 /* MainScreenViewController.swift in Sources */,
 				FFCAD59128632F51002127A4 /* AppDelegate.swift in Sources */,
 				FFCAD59328632F51002127A4 /* SceneDelegate.swift in Sources */,
 			);
